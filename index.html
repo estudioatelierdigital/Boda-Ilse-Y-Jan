@@ -1,0 +1,400 @@
+<!-- 
+====================================================================
+NOTA DE EDICIÓN RÁPIDA:
+- Textos y nombres: Puedes editar cualquier texto directamente entre las etiquetas HTML (por ejemplo, los nombres de los hoteles cuando los tengas).
+- Fechas y horas: Modifica los números en la sección <div class="date-section"> y en los itinerarios.
+- Enlaces de Maps: Reemplaza el "#" en los atributos href="..." de los botones de los hoteles por los enlaces reales de Google Maps.
+- Imágenes: Nombres configurados: IMG_4453.jpeg, IMG_4417.jpeg, IMG_4449.jpeg. Deben ir en assets/img/.
+- Fondos de papel: Se utilizan papel-abajo.png, papel-arriba.png y papel-doble.png dentro de assets/img/. (Asegúrate de que sean PNG sin fondo).
+- Música: El archivo jubel.mp3 debe estar dentro de la carpeta assets/audio/.
+- WhatsApp: Los números ya están listos en los enlaces (href) de los botones finales.
+====================================================================
+-->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Invitación digital de boda de Ilse y Jan.">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Boda de Ilse & Jan</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body class="premium-demo">
+
+    <!-- ========================= -->
+    <!-- LOADER -->
+    <!-- ========================= -->
+    <div class="premium-loader" id="premiumLoader" aria-label="Cargando invitación">
+        <div class="loader-ring"></div>
+        <div class="loader-monogram">
+            I <span>&</span> C
+        </div>
+        <p>Preparando la experiencia</p>
+    </div>
+
+    <!-- ========================= -->
+    <!-- EFECTOS PREMIUM -->
+    <!-- ========================= -->
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+    <div class="ambient-orbs" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="floating-particles" id="floatingParticles" aria-hidden="true"></div>
+
+    <!-- ========================= -->
+    <!-- MÚSICA DE FONDO -->
+    <!-- ========================= -->
+    <audio id="bgMusic" loop preload="metadata">
+        <source src="assets/audio/music.mp3" type="audio/mpeg">
+    </audio>
+
+    <main class="invitation-container">
+
+        <!-- ========================= -->
+        <!-- HERO (PORTADA) -->
+        <!-- ========================= -->
+        <section class="paper-block hero-block fade-in">
+            <img src="assets/img/papel-abajo.png" class="paper-img" alt="">
+            <div class="ornament ornament-top"></div>
+            <div class="paper-content hero-content">
+
+                <div class="monogram" aria-label="Iniciales de los novios">
+                    <span>I</span>
+                    <em>&</em>
+                    <span>C</span>
+                </div>
+
+                <p class="quote">
+                    "Nuestra historia continúa..."
+                </p>
+
+                <p class="event-label">
+                    Nuestra Boda
+                </p>
+
+                <h1 class="couple-names">
+                    <span>Ilse</span>
+                    <em>&</em>
+                    <span>Jan</span>
+                </h1>
+
+                <p class="full-names">
+                    Ilse Rosybeth Robles Huerta
+                    <br>
+                    &
+                    <br>
+                    Jan Can Knopf
+                </p>
+
+                <p class="main-message">
+                    Con la bendición de Dios y el amor de nuestros padres, damos un nuevo paso en nuestras vidas. Nos encantaría que seas parte de este día tan especial.
+                </p>
+
+                <div class="date-section">
+                    <span class="month">ENERO</span>
+                    <div class="date-circle">09</div>
+                    <span class="day">SÁBADO</span>
+                    <span class="year">2027</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ========================= -->
+        <!-- FOTO 1 (HERO) -->
+        <!-- ========================= -->
+        <section class="photo-section photo-section-main photo-1" data-photo-label="Foto principal">
+            <img src="assets/img/IMG_4453.jpeg" class="photo-hero" alt="Ilse y Jan de frente" loading="eager">
+            <div class="photo-placeholder">
+                <span>Ilse & Jan</span>
+            </div>
+        </section>
+
+        <!-- ========================= -->
+        <!-- EVENTOS Y UBICACIONES -->
+        <!-- ========================= -->
+        <section class="paper-block details-block fade-in">
+            <img src="assets/img/papel-doble.png" class="paper-img" alt="">
+            <div class="paper-content">
+
+                <p class="section-kicker">Falta cada vez menos</p>
+                <h2 class="section-title">Cuenta Regresiva</h2>
+
+                <div class="countdown-wrapper" aria-label="Cuenta regresiva para la boda">
+                    <div class="count-box">
+                        <span id="days">00</span>
+                        <p>Días</p>
+                    </div>
+                    <div class="count-box">
+                        <span id="hours">00</span>
+                        <p>Horas</p>
+                    </div>
+                    <div class="count-box">
+                        <span id="minutes">00</span>
+                        <p>Minutos</p>
+                    </div>
+                    <div class="count-box">
+                        <span id="seconds">00</span>
+                        <p>Segundos</p>
+                    </div>
+                </div>
+
+                <!-- EVENTO 1: CEREMONIA -->
+                <article class="event-card">
+                    <div class="event-icon">
+                        <i class="fa-solid fa-church"></i>
+                    </div>
+                    <h2 class="section-title event-title">Ceremonia</h2>
+                    <h3 class="place-name">Parroquia de nuestra Señora de Guadalupe</h3>
+                    <p class="place-address">Fco. I. Madero 8, 63501 <br> Bellavista, Nayarit, México.</p>
+                    <div class="event-time">12:00 PM</div>
+                    
+                    <a href="https://www.google.com/maps/place/Parroquia+de+nuestra+señora+de+Guadalupe/@21.5632637,-104.8836535,17z/data=!3m1!4b1!4m6!3m5!1s0x84274829b5b02a1d:0x8ad0eebcce327392!8m2!3d21.5632637!4d-104.8836535!16s%2Fg%2F11y0l8fkl?entry=ttu&g_ep=EgoyMDI2MTAwNy4wIKXMDSoASAFQAw%3D%3D" class="primary-btn" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-solid fa-location-dot"></i>
+                        Ver ubicación
+                    </a>
+                </article>
+
+                <!-- EVENTO 2: RECEPCIÓN -->
+                <article class="event-card">
+                    <div class="event-icon">
+                        <i class="fa-solid fa-champagne-glasses"></i>
+                    </div>
+                    <h2 class="section-title event-title">Recepción</h2>
+                    <h3 class="place-name">Maria Maria</h3>
+                    <p class="place-address">63865 <br>Laguna de Santa María, Nayarit, México.</p>
+                    <div class="event-time">3:00 PM</div>
+                    
+                    <a href="https://www.google.com/maps/place/María+María/@21.3635188,-104.5814681,17z/data=!4m10!3m9!1s0x842719f7b6bfe069:0x25013b6c89ae1d7e!5m3!1s2026-11-10!4m1!1i2!8m2!3d21.3635139!4d-104.57686!16s%2Fg%2F11h3_g_0qb?entry=ttu&g_ep=EgoyMDI2MTAwNy4wIKXMDSoASAFQAw%3D%3D" class="primary-btn" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-solid fa-location-dot"></i>
+                        Ver ubicación
+                    </a>
+                </article>
+
+                <!-- ITINERARIO -->
+                <div class="timeline-section" style="margin-top: 80px; text-align: center;">
+                    <div class="section-icon">
+                        <i class="fa-regular fa-clock"></i>
+                    </div>
+                    <h2 class="section-title">Itinerario</h2>
+                    <ul class="timeline-list">
+                        <li><strong>12:00 PM</strong> - Ceremonia Religiosa</li>
+                        <li><strong>3:00 PM</strong> - Recepción</li>
+                        <li><strong>4:00 PM</strong> - Entrada de novios</li>
+                        <li><strong>4:15 PM</strong> - Banquete y brindis</li>
+                        <li><strong>6:00 PM</strong> - Vals</li>
+                        <li><strong>6:30 PM</strong> - Baile</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ========================= -->
+        <!-- FOTO 2 (BLANCO Y NEGRO) -->
+        <!-- ========================= -->
+        <section class="photo-section photo-2" data-photo-label="Foto secundaria">
+            <img src="assets/img/833845776_4177398739059050_1384767934061851644_n.jpg" alt="Ilse y Jan Blanco y Negro" loading="lazy">
+            <div class="photo-placeholder">
+                <span>Nuestra Historia</span>
+            </div>
+        </section>
+
+        <!-- ========================= -->
+        <!-- BLOQUE INTERMEDIO (CÓDIGOS, HOTELES Y REGALOS) -->
+        <!-- ========================= -->
+        <section class="paper-block middle-block">
+            <img src="assets/img/papel-doble.png" class="paper-img" alt="">
+            <div class="paper-content">
+
+                <!-- DRESS CODE DAMAS -->
+                <div class="section-icon">
+                    <i class="fa-solid fa-vest-patches"></i>
+                </div>
+                <p class="section-kicker">Dress Code</p>
+                <h2 class="section-title">Código de Vestimenta<br>Damas</h2>
+                <h3 class="dresscode-style">Elegante y Festivo</h3>
+                <p class="dresscode-text">
+                    Preferiblemente vestidos largos o midi en tonos cálidos y armoniosos. <br><br>
+                    <strong>Por favor, evitar estrictamente tonos blancos y marfil.</strong>
+                </p>
+
+                <!-- PALETA DE COLORES DAMAS -->
+                <div class="palette-section" style="margin-bottom: 60px;">
+                    <p class="palette-title">Tonos Sugeridos</p>
+                    <div class="color-palette">
+                        <div class="color-item">
+                            <div class="color-circle" style="background: #A84931;"></div>
+                            <span>Terracota</span>
+                        </div>
+                        <div class="color-item">
+                            <div class="color-circle" style="background: #CD989B;"></div>
+                            <span>Rosa Empolvado</span>
+                        </div>
+                        <div class="color-item">
+                            <div class="color-circle" style="background: #CD9731;"></div>
+                            <span>Amarillo Dorado</span>
+                        </div>
+                        <div class="color-item">
+                            <div class="color-circle" style="background: #F1C25D;"></div>
+                            <span>Amarillo</span>
+                        </div>
+                        <div class="color-item">
+                            <div class="color-circle" style="background: #6C7248;"></div>
+                            <span>Oliva</span>
+                        </div>
+                        <div class="color-item">
+                            <div class="color-circle" style="background: #684124;"></div>
+                            <span>Marrón</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DRESS CODE CABALLEROS -->
+                <div class="section-icon" style="margin-top: 40px;">
+                    <i class="fa-solid fa-user-tie"></i>
+                </div>
+                <h2 class="section-title">Código de Vestimenta<br>Caballeros</h2>
+                <h3 class="dresscode-style">Formal Elegante</h3>
+                <p class="dresscode-text">
+                    Por favor, con traje formal.<br><br>
+                    <strong>Por favor, eviten tonos verde menta, verde oliva y tonos similares.</strong>
+                </p>
+
+                <!-- NOTAS ESPECIALES -->
+                <div class="special-notes-section" style="margin-top: 90px; display: flex; flex-direction: column; gap: 40px;">
+                    <article class="event-card" style="margin-bottom: 0;">
+                        <div class="event-icon"><i class="fa-solid fa-ban"></i></div>
+                        <h3 class="place-name" style="font-size: 1.6rem;">Solo Adultos</h3>
+                        <p class="place-address">Amamos a sus pequeños, pero nuestra celebración será solo para adultos. Gracias por su comprensión.</p>
+                    </article>
+                </div>
+
+                <!-- OPCIONES DE HOSPEDAJE -->
+                <div class="hotels-section" style="margin-top: 90px;">
+                    <div class="section-icon">
+                        <i class="fa-solid fa-bed"></i>
+                    </div>
+                    <p class="section-kicker">Recomendaciones</p>
+                    <h2 class="section-title">Opción de Hospedaje</h2>
+
+                    <!-- Hotel -->
+                    <article class="event-card" style="padding: 30px 20px; margin-bottom: 0;">
+                        <h3 class="place-name" style="font-size: 1.5rem;">Hotel Siete Cielos</h3>
+                        <p class="place-address" style="font-size: 1rem;">Calle princpial en Bungalows Lucero Laguna, 63865 La Laguna, Nay., México</p>
+                        <a href="https://www.google.com/maps/place/Siete+Cielos/@21.3602011,-104.5720464,16z/data=!4m10!3m9!1s0x8427198116b90f03:0x1364078cf3a75476!5m3!1s2026-11-10!4m1!1i2!8m2!3d21.3605542!4d-104.5697838!16s%2Fg%2F11gxmlfkq5?entry=ttu&g_ep=EgoyMDI2MTAwNy4wIKXMDSoASAFQAw%3D%3D" class="secondary-btn" target="_blank" style="margin-top: 20px;">Ver en mapa</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================= -->
+        <!-- FOTO 3 (ABRAZADOS) -->
+        <!-- ========================= -->
+        <section class="photo-section photo-3" data-photo-label="Foto final">
+            <img src="assets/img/IMG_4449.jpeg" class="photo-last" alt="Ilse y Jan abrazados" loading="lazy">
+            <div class="photo-placeholder">
+                <span>Nuestro Amor</span>
+            </div>
+        </section>
+
+        <!-- ========================= -->
+        <!-- FINAL / RSVP / MENSAJE -->
+        <!-- ========================= -->
+        <section class="paper-block final-block fade-in">
+            <img src="assets/img/papel-arriba.png" class="paper-img" alt="">
+            <div class="paper-content">
+
+                <!-- MESA DE REGALOS (SOBRE) -->
+                <div class="gift-section" style="margin-top: 0;">
+                    <div class="section-icon">
+                        <i class="fa-solid fa-envelope-open-text"></i>
+                    </div>
+                    <h2 class="section-title">Mesa de Regalos</h2>
+                    <h3 class="dresscode-style">Lluvia de Sobres</h3>
+                    <p class="gift-text">
+                        Tu presencia en nuestra boda es el mejor regalo que podríamos desear. Si, además, deseas tener un detalle con nosotros, agradeceremos mucho tu contribución en efectivo. 
+                        <br><br>
+                        Como viajamos de México a Alemania, te pedimos por favor no traer regalos materiales, ya que no podremos transportarlos. Habrá un buzón en la recepción para los sobres.
+                    </p>
+                </div>
+
+                                <div class="special-notes-section" style="margin-top: 90px; display: flex; flex-direction: column; gap: 40px;">
+                    <article class="event-card" style="margin-bottom: 0;">
+                        <div class="event-icon"><i class="fa-regular fa-hourglass-half"></i></div>
+                        <h3 class="place-name" style="font-size: 1.6rem;">Puntualidad</h3>
+                        <p class="place-address">La ceremonia y la fiesta comenzarán puntualmente y no queremos que te pierdas nada, así que por favor llega a tiempo.</p>
+                    </article>
+                </div>
+
+                <!-- RSVP -->
+                <div class="rsvp-section" style="margin-top: 90px;">
+                    <div class="section-icon">
+                        <i class="fa-solid fa-calendar-check"></i>
+                    </div>
+                    <p class="section-kicker">Acompáñanos</p>
+                    <h2 class="section-title">Confirmación</h2>
+                    <p class="rsvp-text">
+                        Por favor, confirma tu asistencia antes del <strong>10 de diciembre de 2026</strong>.
+                    </p>
+                    
+                    <div class="rsvp-buttons" style="display: flex; flex-direction: column; gap: 15px; margin-top: 30px; align-items: center;">
+                        <a href="https://wa.me/4917680030502?text=Hola%20Ilse%20y%20Jan%20%F0%9F%91%8B%0A%0AQuiero%20confirmar%20mi%20asistencia%20a%20su%20boda%20del%209%20de%20enero%20de%202027.%0A%0ANombre%3A%0AN%C3%BAmero%20de%20acompa%C3%B1antes%3A" class="rsvp-btn" target="_blank" rel="noopener noreferrer" style="margin-top: 0; width: 100%; max-width: 280px;">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            Confirmar con Ilse
+                        </a>
+                        <a href="https://wa.me/491605253785?text=Hola%20Ilse%20y%20Jan%20%F0%9F%91%8B%0A%0AQuiero%20confirmar%20mi%20asistencia%20a%20su%20boda%20del%209%20de%20enero%20de%202027.%0A%0ANombre%3A%0AN%C3%BAmero%20de%20acompa%C3%B1antes%3A" class="rsvp-btn" target="_blank" rel="noopener noreferrer" style="margin-top: 0; width: 100%; max-width: 280px; background: linear-gradient(135deg, #128C54, #0d633b);">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            Confirmar con Jan
+                        </a>
+                    </div>
+
+                    <!-- MENSAJE ESPECIAL -->
+                    <p class="special-note" style="margin-top: 60px; font-size: 1.2rem; font-weight: 500; line-height: 1.8; color: var(--text-dark); padding: 0 15px;">
+                        Los mejores momentos de la vida se comparten y estamos felices de hacerlo contigo.
+                    </p>
+
+                    <h1 class="final-text">Con cariño,<br>Ilse<br>&<br>Jan</h1>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ========================= -->
+        <!-- FOOTER (MARCA) -->
+        <!-- ========================= -->
+        <footer class="brand-section">
+            <div class="brand-divider"></div>
+            <h3 class="brand-name" style="margin-top: 20px;">ATELIER DIGITAL</h3>
+            <p class="brand-text">Invitaciones digitales personalizadas.</p>
+            <div class="brand-social">
+                <a href="https://www.instagram.com/atelier.digitalmx?igsh=M2k4cjhkeDNyZDQ3" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Atelier Digital">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/share/1HRgm8RcM1/" target="_blank" rel="noopener noreferrer" aria-label="Facebook de Atelier Digital">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- BOTÓN DE MÚSICA -->
+    <button id="playBtn" class="music-btn-float" type="button" aria-label="Reproducir o pausar música">
+        <i class="fa-solid fa-music"></i>
+    </button>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
